@@ -1,0 +1,58 @@
+h1 📚 My Library
+
+- if session[:error]
+  .popup
+    p = session[:error]
+  - session.delete(:error)
+
+.container
+  .left
+    - if current_user
+
+      h2 Your Reading List
+
+      - if @reading_list.empty?
+        p You have no books in your list.
+
+      - @reading_list.each do |book|
+        .card
+          h3 = book["title"]
+          p Author: #{book["author"]}
+
+      a href="/logout" Logout
+
+    - else
+
+      .card
+        h2 Register
+        form action="/register" method="post"
+          input type="text" name="username" placeholder="Username"
+          input type="password" name="password" placeholder="Password"
+          input type="submit" value="Register"
+
+      .card
+        h2 Login
+        form action="/login" method="post"
+          input type="text" name="username" placeholder="Username"
+          input type="password" name="password" placeholder="Password"
+          input type="submit" value="Login"
+
+  .right
+    h2 📖 Book Recommendations
+
+    - @books.each do |book|
+      .card
+        h3 = book["title"]
+        p Author: #{book["author"]}
+
+        - if current_user
+
+          - if @reading_book_ids.include?(book["id"])
+            form action="/books/#{book["id"]}/remove" method="post"
+              input type="submit" value="No ❌"
+          - else
+            form action="/books/#{book["id"]}/add" method="post"
+              input type="submit" value="Yes 👍"
+
+        - else
+          p Description: #{book["description"]}

@@ -1,0 +1,8 @@
+h2 Uppdatera din library
+
+form action="/books/#{@special_book["id"]}/update" method="post" style="height:50px; width:90px; gap:10px;"
+  input type="text" name="name" value="#{@special_book["name"]}" 
+
+  textarea name="description" rows="4" = @special_book["description"]
+
+  input type="submit" value="Uppdatera" style="margin-left:200px;"

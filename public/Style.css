@@ -1,0 +1,105 @@
+body {
+  font-family: sans-serif;
+  color: #212023;
+  background-color: #fcf1f5;
+  margin: 1em;
+  margin-top: 0em;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#title {
+  text-align: center;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.left {
+  width: 35%;
+}
+
+.right {
+  width: 65%;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  border: #1d1153;
+  border-style: solid;
+}
+
+.card h2 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.card form {
+  margin-top: 10px;
+}
+
+.card input[type="text"],
+.card input[type="number"] {
+  width: 95%;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.card input[type="submit"] {
+  margin-top: 10px;
+  margin-left: 100px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: rgb(51, 62, 125);
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.card input[type="submit"]:hover {
+  background: #8ec7e6;
+}
+
+nav {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #b7caa7;
+  padding: 15px;
+  border: #ffffff;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+ 
+  
+}
+
+.smallbutton {
+
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+
+}
+
+.popup {
+  position: fixed;
+  top: 10px;
+  left: 300px;
+  background: rgb(253, 135, 135);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 3px solid darkred;
+  z-index: 9999;
+}

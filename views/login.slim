@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title Login
+  body
+    h1 Login
+    - if @error
+      p style="color:red;"= @error
+    form action="/login" method="post"
+      input type="text" name="username" placeholder="Username" required
+      br
+      input type="password" name="password" placeholder="Password" required
+      br
+      input type="submit" value="Login"
